@@ -1,0 +1,40 @@
+.form {
+  max-width: 403px;
+}
+
+.form__wrapper {
+  padding: 45px 50px 50px;
+  background-color: $color-tangaroa;
+
+  @include vp-767 {
+    padding: 36px 30px 40px 30px;
+  }
+
+  h3 {
+    margin: 0 0 26px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: $color-alice-blue;
+
+    @include vp-767 {
+      margin: 0 0 27px;
+      line-height: 25px;
+      text-align: center;
+    }
+  }
+}
+
+.form__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__submit {
+  padding: 11px;
+  margin-top: 35px;
+
+  @include vp-767 {
+    margin-top: 26px;
+  }
+}

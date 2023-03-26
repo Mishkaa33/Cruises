@@ -1,0 +1,119 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #528ac1;
+}
+
+.header__wrapper {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px 40px;
+
+  @include vp-1023 {
+    padding: 30px 45px;
+  }
+
+  @include vp-767 {
+    padding: 20px 15px;
+  }
+}
+
+.header__burger {
+  width: 24px;
+  height: 19px;
+  border: none;
+  z-index: 99;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  display: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: $color-default-white;
+    box-shadow: 0 6.5px 0 0 #fff, 0 12.5px 0 0 #fff;
+  }
+
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 1.5px;
+    background-color: transparent;
+  }
+
+  .is-open & {
+    width: 24px;
+    height: 19px;
+  }
+
+  .is-open &::before {
+    top: 9px;
+    left: 8px;
+    width: 13px;
+    height: 2px;
+    transform: rotate(45deg);
+    box-shadow: none;
+    background-color: $color-tangaroa;
+  }
+
+  .is-open &::after {
+    display: block;
+    width: 13px;
+    left: 8px;
+    height: 2px;
+    transform: rotate(-45deg);
+    background-color: $color-tangaroa;
+  }
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.header__nav {
+  @include vp-767 {
+    display: none;
+
+    .is-open & {
+      display: block;
+      position: fixed;
+      background-color: #fff;
+      padding: 75px 30px 15px;
+      top: 0;
+      left: 36px;
+      z-index: 0;
+      min-width: 320px;
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+}
+
+.header__nav-link {
+  @include vp-767 {
+    color: $color-tangaroa;
+  }
+}
+
+.header__logo {
+  flex-shrink: 0;
+  color: $color-alice-blue;
+  @include vp-767 {
+    .is-open & {
+      color: black;
+      z-index: 99;
+      margin-left: 38px;
+    }
+  }
+}

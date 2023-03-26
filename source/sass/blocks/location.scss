@@ -1,0 +1,92 @@
+.location {
+  padding: 120px 0;
+
+  @include vp-1023 {
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    padding: 58px 0 101px 0;
+  }
+}
+
+.location__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 100px;
+  align-items: center;
+
+  @include vp-1023 {
+    gap: 0 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.location__map {
+  @include vp-1023 {
+    width: 324px;
+    height: 335px;
+  }
+
+  @include vp-767 {
+    order: 1;
+    width: 100%;
+    height: 316px;
+  }
+}
+
+.location__info {
+  h2 {
+    font-weight: 500;
+    margin: 0 0 24px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+
+    @include vp-1023 {
+      margin: 0 0 27px;
+    }
+  }
+
+  address {
+    display: flex;
+    align-items: center;
+    margin: 7px 0 21px;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include vp-1023 {
+      align-items: flex-start;
+    }
+  }
+}
+
+.location__phone {
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+
+  @include vp-1023 {
+    align-items: flex-start;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+
+    text-decoration: underline;
+    transition: 1s ease-in-out;
+  }
+}
+
+.location__icon {
+  flex-shrink: 0;
+  margin: 0 10px 0 0;
+
+  @include vp-1023 {
+    margin: 3px 10px 0 0;
+  }
+}

@@ -1,0 +1,52 @@
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 0 34px;
+
+  @include vp-1023 {
+    gap: 24px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+
+    &--alt-gap {
+      gap: 14px;
+    }
+  }
+}
+
+.nav__link {
+  color: $color-alice-blue;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  @include vp-1023 {
+    font-size: 14px;
+    line-height: 17px;
+
+    &--less-text {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px;
+
+    &--less-text {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}
