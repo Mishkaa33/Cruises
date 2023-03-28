@@ -983,7 +983,7 @@ button,
 .custom-toggle input:checked + .custom-toggle__icon::before {
   width: 12px;
   height: 10px;
-  background-image: url("../../img/svg/arrow.svg");
+  background-image: url("../img/svg/arrow.svg");
   background-repeat: no-repeat;
 }
 
@@ -2244,6 +2244,8 @@ button,
     right: 0;
     left: 36px;
     height: 100vh;
+    -webkit-box-shadow: -36px 0 0 rgba(0, 43, 102, 0.5);
+    box-shadow: -36px 0 0 rgba(0, 43, 102, 0.5);
   }
 
   .header__wrapper {
