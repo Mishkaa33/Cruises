@@ -1900,7 +1900,6 @@ button,
 
 .location__info h2 {
   font-weight: 500;
-  margin: 0 0 24px;
   font-size: 18px;
   line-height: 27px;
   margin: 0 0 31px;
@@ -2239,7 +2238,7 @@ button,
   }
 
   .header.is-open {
-    background-color: #fff;
+    background-color: #ffffff;
     z-index: 1;
     top: 0;
     right: 0;
