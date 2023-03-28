@@ -8,8 +8,44 @@
       name="description"
       content="Круизы в Антарктику. Путешействуйте с нами!"
     />
-    <title>Antarctic Cruises</title>
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Круизы в Антарктику</title>
     <link rel="stylesheet" href="css/style.min.css" />
+    <link
+      rel="preload"
+      href="./fonts/Montserrat-Regular.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="./fonts/Montserrat-Medium.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      type="img/favicon"
+      href="./img/favicon/favicon-32x32.png"
+      rel="icon"
+      sizes="32x32"
+    />
+    <link
+      type="img/favicon"
+      href="./img/favicon/favicon-16x16.png"
+      rel="icon"
+      sizes="16x16"
+    />
+    <link
+      href="./img/favicon/apple-touch-icon.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
+      href="./img/favicon/site.webmanifest"
+      rel="manifest"
+      crossorigin="use-credentials"
+    />
   </head>
   <body>
     <div class="wrapper">
@@ -31,25 +67,43 @@
             </svg>
           </a>
           <button class="header__burger" type="button"></button>
+
           <nav class="nav header__nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="#" class="nav__link header__nav-link">Преимущества</a>
+                <a
+                  href="#advantages"
+                  class="nav__link header__nav-link"
+                  data-menu-close
+                  >Преимущества</a
+                >
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link header__nav-link">Направления</a>
+                <a href="#" class="nav__link header__nav-link" data-menu-close
+                  >Направления</a
+                >
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link header__nav-link"
+                <a
+                  href="#catalog"
+                  class="nav__link header__nav-link"
+                  data-menu-close
                   >Ближайшие круизы</a
                 >
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link header__nav-link">Контакты</a>
+                <a
+                  href="#contacts"
+                  class="nav__link header__nav-link"
+                  data-menu-close
+                  >Контакты</a
+                >
               </li>
             </ul>
           </nav>
         </div>
+      </header>
+      <main>
         <section class="intro">
           <picture>
             <source
@@ -103,8 +157,6 @@
             <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
           </div>
         </section>
-      </header>
-      <main>
         <section class="promo">
           <div class="container">
             <div class="promo__wrapper">
@@ -135,7 +187,7 @@
             </div>
           </div>
         </section>
-        <section class="advantages">
+        <section class="advantages" id="advantages">
           <picture>
             <source
               type="image/webp"
@@ -235,14 +287,15 @@
                 </svg>
                 <h3>Экскурсионные туры на&nbsp;Zodiac</h3>
                 <p>
-                  Экскурсионные туры к берегам Антарктиды совершаются на
-                  оборудованных лодках типа Zodiac c опытными экскурсоводами.
+                  Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на
+                  оборудованных лодках типа Zodiac c&nbsp;опытными
+                  экскурсоводами.
                 </p>
               </li>
             </ul>
           </div>
         </section>
-        <section class="catalog">
+        <section class="catalog" id="catalog">
           <div class="container">
             <div class="catalog__wrapper">
               <h2>Ближайшие круизы</h2>
@@ -643,7 +696,7 @@
                   Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами
                   в&nbsp;ближайшее время
                 </h3>
-                <form action="">
+                <form action="https://echo.htmlacademy.ru/" method="post">
                   <div class="form__content">
                     <div
                       class="custom-input"
@@ -665,7 +718,7 @@
                     <div
                       class="custom-input"
                       data-validate-type="phone"
-                      data-on-input-validate,
+                      data-on-input-validate
                       data-message-base="Поле обязательно к заполнению"
                       data-message-extra="Проверьте корректность заполнения поля"
                       data-message-success="Поле заполнено верно"
@@ -715,7 +768,8 @@
             </div>
           </div>
         </section>
-        <section class="location">
+        <section class="location" id="contacts">
+          <h2 class="visually-hidden">Как с нами связаться</h2>
           <div class="container">
             <div class="location__wrapper">
               <iframe
@@ -723,7 +777,6 @@
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3A43208e2e83ac5f3e02a18f368281a22e1c4791b0d2c5d8715f532e3ab2552799&amp;source=constructor"
                 width="560"
                 height="306"
-                frameborder="0"
                 loading="lazy"
                 aria-label="Интерактиваная карта где мне находмся."
               ></iframe>
@@ -767,7 +820,11 @@
       <footer class="footer">
         <div class="container">
           <div class="footer__wrapper">
-            <a class="logo" href="index.html" aria-label="Вернуться на главную">
+            <a
+              class="logo footer__logo"
+              href="index.html"
+              aria-label="Вернуться на главную"
+            >
               <svg
                 width="70"
                 height="38"
@@ -781,7 +838,7 @@
             <nav class="nav">
               <ul class="nav__list nav__list--alt-gap">
                 <li class="nav__item">
-                  <a href="#" class="nav__link nav__link--less-text"
+                  <a href="#advantages" class="nav__link nav__link--less-text"
                     >Преимущества</a
                   >
                 </li>
@@ -791,12 +848,12 @@
                   >
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link nav__link--less-text"
+                  <a href="#catalog" class="nav__link nav__link--less-text"
                     >Ближайшие круизы</a
                   >
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link nav__link--less-text"
+                  <a href="#contacts" class="nav__link nav__link--less-text"
                     >Контакты</a
                   >
                 </li>
@@ -825,7 +882,7 @@
                 <li class="social__item">
                   <a
                     href="#"
-                    class="social__link social__icon--dzen"
+                    class="social__link"
                     aria-label="Мы в Яндекс.Дзен"
                   >
                     <svg
@@ -841,11 +898,7 @@
                   </a>
                 </li>
                 <li class="social__item">
-                  <a
-                    href="#"
-                    class="social__link social__icon--reddit"
-                    aria-label="Мы на реддит"
-                  >
+                  <a href="#" class="social__link" aria-label="Мы на реддит">
                     <svg
                       class="social__icon"
                       width="20"
@@ -864,52 +917,6 @@
         </div>
       </footer>
     </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button
-            class="modal__close-btn btn-reset"
-            type="button"
-            aria-label="Закрыть попап"
-            data-close-modal
-          >
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="modal modal--preload modal--fit-content modal--no-scale"
-      data-modal="success"
-    >
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">
-            Размер этой модалки зависит от ширины контента,<br />
-            отключена анимация-скейл
-          </p>
-          <button
-            class="modal__close-btn btn-reset"
-            type="button"
-            aria-label="Закрыть попап"
-            data-close-modal
-          >
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
