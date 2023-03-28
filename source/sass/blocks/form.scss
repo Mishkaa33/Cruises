@@ -36,7 +36,11 @@
 
 .form__submit {
   padding: 11px;
-  margin-top: 35px;
+  margin-top: 33px;
+
+  @include vp-1023 {
+    margin-top: 31px;
+  }
 
   @include vp-767 {
     margin-top: 26px;
