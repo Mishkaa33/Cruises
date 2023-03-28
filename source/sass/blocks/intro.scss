@@ -1,17 +1,20 @@
 .intro {
   display: flex;
-  padding: 162px 0 170px;
+  padding: 269px 0 279px;
+  position: relative;
   min-height: 543px;
   transition: ease-in-out 1s;
   background-color: #528ac1;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 
   @include vp-1023 {
-    padding: 187px 0 170px;
+    filter: none;
+    padding: 268px 0 274px;
     min-height: 558px;
   }
 
   @include vp-767 {
-    padding: 113px 0 135px;
+    padding: 176px 0 179px;
     min-height: 438px;
   }
 }
@@ -20,16 +23,9 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 650px;
+  height: 100%;
+  object-fit: cover;
   transition: ease-in-out;
-
-  @include vp-1023 {
-    height: 638px;
-  }
-
-  @include vp-767 {
-    height: 500px;
-  }
 }
 
 .intro__wrapper {
@@ -37,12 +33,12 @@
   padding: 0 136px;
 
   h1 {
-    margin: 0 0 12px 0;
+    margin: 0 0 13px 0;
+    font-weight: bold;
     font-size: 54px;
     line-height: 66px;
-    letter-spacing: 0.028em;
     color: $color-alice-blue;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
     @include vp-1023 {
       margin: 0 0 13px 0;
@@ -62,7 +58,7 @@
     font-size: 20px;
     line-height: 24px;
     color: $color-alice-blue;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
     @include vp-1023 {
       font-size: 18px;

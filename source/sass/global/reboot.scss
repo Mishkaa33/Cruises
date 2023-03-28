@@ -18,7 +18,7 @@ html {
   line-height: 18px;
   font-family: $ff-montserrat;
   color: $color-tangaroa;
-
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // оптимизация выравнивания шрифта относительно центра строки
@@ -82,7 +82,6 @@ select {
 
 // ie11 X removal
 input {
-
   &::-ms-clear,
   &::-ms-reveal {
     display: none;
@@ -112,13 +111,15 @@ input[type="number"] {
 // ios button \ inputs reset
 select,
 textarea,
-input:matches([type="email"],
-  [type="number"],
-  [type="password"],
-  [type="search"],
-  [type="tel"],
-  [type="text"],
-  [type="url"]) {
+input:matches(
+    [type="email"],
+    [type="number"],
+    [type="password"],
+    [type="search"],
+    [type="tel"],
+    [type="text"],
+    [type="url"]
+  ) {
   appearance: none;
 }
 

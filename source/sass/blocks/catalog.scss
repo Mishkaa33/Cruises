@@ -1,5 +1,5 @@
 .catalog {
-  padding: 84px 0 120px 0;
+  padding: 85px 0 120px 0;
 
   @include vp-1023 {
     padding: 90px 0 100px 0;
@@ -74,7 +74,7 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.8);
     outline: none;
 
     h2 {
@@ -168,6 +168,7 @@
 
 .catalog__content-item {
   margin: 0 0 11px;
+
   h3 {
     margin: 0 0 1px;
     font-weight: 500;
