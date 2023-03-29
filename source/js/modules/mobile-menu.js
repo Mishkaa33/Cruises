@@ -2,7 +2,7 @@ const header = document.querySelector('.header');
 const burger = document.querySelector('.header__burger');
 const breakpoint = window.matchMedia('(max-width: 767px)');
 const headerLink = document.querySelectorAll('[data-menu-close]');
-import {isEscEvt} from '../utils/utils';
+
 
 const checkWindowSize = () => {
   if (breakpoint.matches && header.classList.contains('is-open')) {
@@ -16,17 +16,6 @@ const closeMenu = () => {
   if (header.classList.contains('is-open')) {
     header.classList.remove('is-open');
     document.documentElement.classList.remove('scroll-lock');
-  } else {
-    return;
-  }
-};
-
-const onEscKeydown = (evt) => {
-  evt.preventDefault();
-
-  if (isEscEvt(evt) && header.classList.contains('is-open')) {
-    header.classList.remove('is-open');
-    removeListeners();
   } else {
     return;
   }
@@ -57,7 +46,6 @@ const removeListeners = () => {
 
 const addListeners = () =>{
   window.addEventListener('resize', checkWindowSize);
-  window.addEventListener('keydown', onEscKeydown);
   document.addEventListener('click', clickOutsideMenu);
 };
 
