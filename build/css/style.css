@@ -416,14 +416,6 @@ template {
   src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
 }
 
-@font-face {
-  font-style: normal;
-  font-weight: 400;
-  font-family: "";
-  font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
-}
-
 *,
 *::before,
 *::after {
@@ -993,6 +985,10 @@ button,
   height: 10px;
   background-image: url("../img/svg/arrow.svg");
   background-repeat: no-repeat;
+}
+
+.custom-toggle input:focus + .custom-toggle__icon {
+  opacity: 0.5;
 }
 
 .custom-toggle.is-invalid label span {
