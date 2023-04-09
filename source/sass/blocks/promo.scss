@@ -14,7 +14,6 @@
   display: grid;
   grid-template-columns: 1fr 560px;
   gap: 0 64px;
-  align-items: center;
 
   @include vp-1023 {
     grid-template-columns: 1fr 324px;
@@ -30,6 +29,8 @@
 }
 
 .promo__text {
+  align-self: center;
+
   h2 {
     margin: -4px 0 24px;
     font-size: 28px;
