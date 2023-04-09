@@ -22,6 +22,8 @@
 }
 
 .booking__info {
+  align-self: center;
+
   @include vp-1023 {
     display: flex;
     flex-direction: column;
@@ -66,7 +68,7 @@
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr 403px;
-  align-items: center;
+
   padding: 0 100px;
   gap: 50px;
 
