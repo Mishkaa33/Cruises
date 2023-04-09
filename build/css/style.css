@@ -1458,9 +1458,12 @@ button,
   -ms-grid-columns: 1fr 560px;
   grid-template-columns: 1fr 560px;
   gap: 0 64px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+}
+
+.promo__text {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .promo__text h2 {
@@ -1665,8 +1668,6 @@ button,
   top: 0;
   width: 260px;
   height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 
 .catalog__card-item {
@@ -1678,14 +1679,14 @@ button,
 }
 
 .catalog__card-item:hover,
-.catalog__card-item:focus {
+.catalog__card-item:focus-within {
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.8);
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.8);
   outline: none;
 }
 
 .catalog__card-item:hover h2,
-.catalog__card-item:focus h2 {
+.catalog__card-item:focus-within h2 {
   margin: 0 0 12px 0;
   -webkit-transition: margin 0.5s ease-in-out;
   -o-transition: margin 0.5s ease-in-out;
@@ -1693,19 +1694,19 @@ button,
 }
 
 .catalog__card-item:hover .catalog__image,
-.catalog__card-item:focus .catalog__image {
+.catalog__card-item:focus-within .catalog__image {
   display: none;
 }
 
 .catalog__card-item:hover .catalog__order,
-.catalog__card-item:focus .catalog__order {
+.catalog__card-item:focus-within .catalog__order {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
 .catalog__card-item:hover .catalog__content,
-.catalog__card-item:focus .catalog__content {
+.catalog__card-item:focus-within .catalog__content {
   display: block;
   opacity: 1;
   -webkit-animation: showContent 1s ease-in-out;
@@ -1761,7 +1762,6 @@ button,
   padding: 30px 25px 35px;
   min-height: 386px;
   right: 0;
-  bottom: 0;
 }
 
 .catalog__card-wrapper h2 {
@@ -1824,6 +1824,12 @@ button,
   height: 100%;
 }
 
+.booking__info {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
 .booking__info h2 {
   font-weight: 700;
   margin: -9px 0 9px;
@@ -1844,9 +1850,6 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 403px;
   grid-template-columns: 1fr 403px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   padding: 0 100px;
   gap: 50px;
 }
@@ -1893,13 +1896,16 @@ button,
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 0 100px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .location__map {
   border: none;
+}
+
+.location__info {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .location__info h2 {
@@ -2277,7 +2283,7 @@ button,
     margin-top: 43px;
     padding: 0 16px 0 10px;
     display: block;
-    height: 100vh;
+    height: 400px;
     width: 100%;
     overflow: auto;
     z-index: 0;
