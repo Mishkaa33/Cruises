@@ -9,6 +9,7 @@
 
   &.is-open {
     @include vp-767 {
+      overflow: auto;
       background-color: $color-default-white;
       z-index: 1;
       top: 0;
@@ -111,7 +112,7 @@
       margin-top: 43px;
       padding: 0 16px 0 10px;
       display: block;
-      height: 400px;
+      height: 250px;
       width: 100%;
       overflow: auto;
 
